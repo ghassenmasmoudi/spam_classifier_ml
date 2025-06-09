@@ -14,7 +14,7 @@ if st.button("Prédire"):
         st.error("Merci de saisir un email.")
     else:
         # Appel API Flask
-        url = "http://127.0.0.1:5000/predict"  # Adresse API Flask locale
+        url = "https://flask-api-oz82.onrender.com/predict"
         payload = {'email': email_input, 'model': model}
         try:
             response = requests.post(url, json=payload)
